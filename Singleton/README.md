@@ -1,2 +1,2 @@
 The singleton pattern ensures that only once instance on an object can be created.
-For example, when a user is interacting with a bank account, you may not want multiple instanced on a bank accoun to be created.
+For example, when a user is interacting with a bank account, you may not want multiple instanced of a bank account to be created.
