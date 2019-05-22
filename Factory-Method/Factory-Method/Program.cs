@@ -21,12 +21,12 @@ namespace Factory_Method
 
     }
 
-    public abstract class IAccount
+    public abstract class Account
     {
         public decimal Balance { get; set; }
     }
 
-    public class Savings : IAccount
+    public class Savings : Account
     {
         public Savings()
         {
@@ -34,7 +34,7 @@ namespace Factory_Method
         }
     }
 
-    public class Cheque : IAccount
+    public class Cheque : Account
     {
         public Cheque()
         {
@@ -44,12 +44,12 @@ namespace Factory_Method
 
     interface IAccountFactory
     {
-        IAccount GetAccount(string accNo);
+        Account GetAccount(string accNo);
     }
 
     public class AccountFactory: IAccountFactory
     {
-        public IAccount GetAccount(string accNo)
+        public Account GetAccount(string accNo)
         {
             if (accNo.Contains("sav", StringComparison.InvariantCultureIgnoreCase))
             {
